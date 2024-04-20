@@ -3,7 +3,11 @@ import {
   home,
   agregarRoommate,
   verRoommate,
-  rutaGenerica,
+  verGastos,
+  agregarGastos,
+  eliminarGastos,
+  editarGastos,
+  rutaGenerica
 } from "../controllers/controller.js";
 const router = express.Router();
 
@@ -14,6 +18,11 @@ router.get("/", home);
 router.post('/roommate', agregarRoommate)
 router.get('/roommates', verRoommate)
 
+//gastos
+router.get('/gastos', verGastos)
+router.post('/gasto', agregarGastos);
+router.delete('/gasto', eliminarGastos);
+router.put("/gasto", editarGastos);
 
 //ruta generica
 router.get("*", rutaGenerica);

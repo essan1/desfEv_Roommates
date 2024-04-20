@@ -1,3 +1,30 @@
 {
-  "gastos": []
+  "gastos": [
+    {
+      "roommate": "Fatna El Morabet",
+      "descripcion": "Comida",
+      "monto": 20000,
+      "fecha": "2024-04-20T00:28:38.176Z",
+      "id": "757b4ef7"
+    },
+    {
+      "roommate": "Hugo Iglesias",
+      "descripcion": "Pago de Cuentas",
+      "monto": 80000,
+      "fecha": "2024-04-20T00:32:27.599Z",
+      "id": "ab0aac97"
+    },
+    {
+      "roommate": "Zoé Roux",
+      "descripcion": "    Articulos de limpieza",
+      "monto": 40000,
+      "id": "5dd366a2"
+    },
+    {
+      "roommate": "Antonio Dupont",
+      "descripcion": "Uber",
+      "monto": 12000,
+      "id": "ba535063"
+    }
+  ]
 }
