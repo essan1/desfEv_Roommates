@@ -112,12 +112,13 @@ const recalcularDeudas = () => {
       } else {
         r.debe -= montoPorPersona;
       }
-      r.total = r.recibe - r.debe;
+      r.total = (r.recibe - r.debe).toFixed(2); // Redondeamos a dos decimales
     });
   });
 
   fs.writeFileSync("./data/roommates.json", JSON.stringify({ roommates }));
 };
+
 
 
 export {
