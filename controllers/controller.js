@@ -5,7 +5,8 @@ import {
   verGastosQuery,
   agregarGastosQuery,
   eliminarGastosQuery,
-  editarGastosQuery
+  editarGastosQuery,
+  recalcularDeudas
 } from "../queries/queries.js";
 const __dirname = import.meta.dirname;
 
@@ -21,6 +22,7 @@ const home = (req, res) => {
 const agregarRoommate = async (req, res) => {
   try {
     await agregarRoommateQuery();
+    recalcularDeudas();
     res.redirect("/");
   } catch (error) {
     console.log(error);
@@ -48,6 +50,7 @@ const agregarGastos = async (req, res) => {
   try {
     const gasto = req.body;
     await agregarGastosQuery(gasto);
+    recalcularDeudas();
     res.send("Gasto agregado");
   } catch (error) {
     console.log(error.message);
@@ -58,6 +61,7 @@ const eliminarGastos = async (req, res) => {
     const id = req.query.id;
 
     await eliminarGastosQuery(id);
+    recalcularDeudas();
     res.send("Gasto eliminado");
   } catch (error) {
     console.log(error.message);
@@ -67,6 +71,7 @@ const editarGastos = async (req, res) => {
   try {
     const id = req.query.id;
     const gasto = req.body;
+    await recalcularDeudas();
     await editarGastosQuery(id, gasto);
 
     res.send("Gasto editado");
