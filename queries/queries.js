@@ -112,7 +112,7 @@ const recalcularDeudas = () => {
       } else {
         r.debe -= montoPorPersona;
       }
-      r.total = (r.recibe - r.debe).toFixed(2); // Redondeamos a dos decimales
+      r.total = (r.recibe - r.debe).toFixed(2); //se agrega toFixed
     });
   });
 

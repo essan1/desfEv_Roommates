@@ -2,7 +2,7 @@ body {
   text-align: center;
   color: white;
   text-shadow: 0px 0px 3px black;
-  background: #01886f;
+  background: #02604f;
   font-family: "Sedan", serif;
   font-weight: 600;
   font-style: normal;
@@ -16,6 +16,7 @@ body {
 button {
   background: #ff1dd9 !important;
 }
+
 i {
   cursor: pointer;
 }
